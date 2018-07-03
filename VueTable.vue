@@ -48,6 +48,12 @@ export VueTable {
       toggle: true
     }
   },
+  watch: {
+    tableHead () {
+      let byThisRule = makeObjectSortRule(this['tableHead'][0], this.toggle)
+      this['tableBody'].sort(byThisRule)
+    }
+  },
   methods: {
     sort (event) {
       let text = event.target.textContent.trim()
