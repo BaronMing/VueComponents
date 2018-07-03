@@ -6,7 +6,7 @@ let MousePromptBoxID = 'MousePromptBox'
 
 let div = document.createElement('div')
 div.id = MousePromptBoxID
-document.body.appendChild()
+document.body.appendChild(div)
 
 export default function (event, item) {
   let position = {
